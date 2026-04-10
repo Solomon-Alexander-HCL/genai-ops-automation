@@ -1,5 +1,13 @@
 import sqlite3
 import pandas as pd
+import logging
+ 
+# Logging setup
+logging.basicConfig(
+    filename='logs/system_logs.txt',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
  
 DB_PATH = "ops.db"
  
@@ -7,18 +15,20 @@ DB_PATH = "ops.db"
 def run_validation():
     try:
         print("\n🔍 Running Data Validation Checks...\n")
+        logging.info("Validation started")
  
         conn = sqlite3.connect(DB_PATH)
  
-        # 1. Missing Values
+        # Missing Values
         missing_df = pd.read_sql("""
             SELECT * FROM corporate_actions
             WHERE value IS NULL
         """, conn)
  
         print(f"⚠️ Missing Records: {len(missing_df)}")
+        logging.info(f"Missing Records: {len(missing_df)}")
  
-        # 2. Duplicate Records
+        # Duplicate Records
         duplicate_df = pd.read_sql("""
             SELECT event_id, COUNT(*) as count
             FROM corporate_actions
@@ -27,22 +37,25 @@ def run_validation():
         """, conn)
  
         print(f"⚠️ Duplicate Records: {len(duplicate_df)}")
+        logging.info(f"Duplicate Records: {len(duplicate_df)}")
  
-        # 3. Value Mismatch
+        # Mismatch
         mismatch_df = pd.read_sql("""
             SELECT * FROM corporate_actions
             WHERE value != expected_value
         """, conn)
  
         print(f"⚠️ Mismatch Records: {len(mismatch_df)}")
+        logging.info(f"Mismatch Records: {len(mismatch_df)}")
  
-        # 4. Invalid Values (0 or negative)
+        # Invalid
         invalid_df = pd.read_sql("""
             SELECT * FROM corporate_actions
             WHERE value <= 0
         """, conn)
  
         print(f"⚠️ Invalid Records: {len(invalid_df)}")
+        logging.info(f"Invalid Records: {len(invalid_df)}")
  
         conn.close()
  
@@ -55,14 +68,9 @@ def run_validation():
  
     except Exception as e:
         print("❌ Validation Error:", e)
+        logging.error(f"Validation error: {e}")
         return None
  
  
 if __name__ == "__main__":
-    results = run_validation()
- 
-    # Debug print
-    if results:
-        for key, df in results.items():
-            print(f"\n📌 {key.upper()} DATA:")
-            print(df)
+    run_validation()

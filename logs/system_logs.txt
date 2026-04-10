@@ -1,0 +1,10 @@
+2026-04-10 20:24:40,150 - INFO - Started loading Excel file
+2026-04-10 20:24:40,410 - INFO - Loaded 11 records from Excel
+2026-04-10 20:24:40,428 - INFO - Data loaded into SQLite successfully
+2026-04-10 20:24:40,428 - INFO - Validation started
+2026-04-10 20:24:40,430 - INFO - Missing Records: 1
+2026-04-10 20:24:40,430 - INFO - Duplicate Records: 1
+2026-04-10 20:24:40,432 - INFO - Mismatch Records: 4
+2026-04-10 20:24:40,433 - INFO - Invalid Records: 1
+2026-04-10 20:24:40,433 - INFO - Ticket generation started
+2026-04-10 20:24:40,437 - INFO - 7 tickets generated and saved
