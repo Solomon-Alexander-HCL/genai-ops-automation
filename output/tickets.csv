@@ -1,8 +1,8 @@
-ticket_id,issue_type,event_id,stock,description,priority,status,created_time
-TICK-20260410193406380420,MISSING,3,HDFC,Missing value detected in corporate action data,HIGH,OPEN,2026-04-10 19:34:06
-TICK-20260410193406380608,DUPLICATE,4,N/A,Duplicate event_id found (2 times),MEDIUM,OPEN,2026-04-10 19:34:06
-TICK-20260410193406380967,MISMATCH,2,INFY,Value mismatch between actual and expected,HIGH,OPEN,2026-04-10 19:34:06
-TICK-20260410193406381113,MISMATCH,5,SBIN,Value mismatch between actual and expected,HIGH,OPEN,2026-04-10 19:34:06
-TICK-20260410193406381194,MISMATCH,7,WIPRO,Value mismatch between actual and expected,HIGH,OPEN,2026-04-10 19:34:06
-TICK-20260410193406381272,MISMATCH,10,LT,Value mismatch between actual and expected,HIGH,OPEN,2026-04-10 19:34:06
-TICK-20260410193406381563,INVALID,7,WIPRO,Invalid value (zero or negative),HIGH,OPEN,2026-04-10 19:34:06
+ticket_id,issue_type,event_id,stock,description,priority,status,root_cause,suggestion,created_time
+TICK-20260410194900148969,MISSING,3,HDFC,Missing value detected in corporate action data,HIGH,OPEN,Upstream data source failed to provide value,Check source system and reprocess missing data,2026-04-10 19:49:00
+TICK-20260410194900149086,DUPLICATE,4,N/A,Duplicate event_id found (2 times),MEDIUM,OPEN,,,2026-04-10 19:49:00
+TICK-20260410194900149365,MISMATCH,2,INFY,Value mismatch between actual and expected,HIGH,OPEN,Mismatch between expected and actual values for INFY,Validate corporate action feed and correct value before posting,2026-04-10 19:49:00
+TICK-20260410194900149439,MISMATCH,5,SBIN,Value mismatch between actual and expected,HIGH,OPEN,Mismatch between expected and actual values for SBIN,Validate corporate action feed and correct value before posting,2026-04-10 19:49:00
+TICK-20260410194900149501,MISMATCH,7,WIPRO,Value mismatch between actual and expected,HIGH,OPEN,Mismatch between expected and actual values for WIPRO,Validate corporate action feed and correct value before posting,2026-04-10 19:49:00
+TICK-20260410194900149560,MISMATCH,10,LT,Value mismatch between actual and expected,HIGH,OPEN,Mismatch between expected and actual values for LT,Validate corporate action feed and correct value before posting,2026-04-10 19:49:00
+TICK-20260410194900149809,INVALID,7,WIPRO,Invalid value (zero or negative),HIGH,OPEN,Invalid value detected (zero or negative),Check business rules and correct invalid data,2026-04-10 19:49:00

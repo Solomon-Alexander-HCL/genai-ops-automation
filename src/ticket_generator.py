@@ -1,6 +1,7 @@
 import pandas as pd
 from datetime import datetime
- 
+from ai_engine import generate_ai_analysis
+
 OUTPUT_PATH = "output/tickets.csv"
  
  
@@ -8,17 +9,20 @@ def generate_ticket(issue_type, row):
     """
     Create a structured ticket for each issue
     """
- 
+    ai_data = generate_ai_analysis(issue_type, row)
+    
     ticket = {
-        "ticket_id": f"TICK-{datetime.now().strftime('%Y%m%d%H%M%S%f')}",
-        "issue_type": issue_type,
-        "event_id": row.get("event_id", "N/A"),
-        "stock": row.get("stock", "N/A"),
-        "description": "",
-        "priority": "",
-        "status": "OPEN",
-        "created_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    }
+            "ticket_id": f"TICK-{datetime.now().strftime('%Y%m%d%H%M%S%f')}",
+            "issue_type": issue_type,
+            "event_id": row.get("event_id", "N/A"),
+            "stock": row.get("stock", "N/A"),
+            "description": "",
+            "priority": ai_data["risk"],
+            "status": "OPEN",
+            "root_cause": ai_data["root_cause"],
+            "suggestion": ai_data["suggestion"],
+            "created_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
  
     # Add logic for each issue type
     if issue_type == "MISSING":
