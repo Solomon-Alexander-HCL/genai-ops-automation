@@ -1,37 +1,35 @@
 def generate_ai_analysis(issue_type, row):
     """
-    Simulated AI logic for root cause, risk and resolution
+    This function simulates AI reasoning.
+    It explains WHY issue occurred and WHAT to do.
     """
- 
-    event_id = row.get("event_id", "N/A")
-    stock = row.get("stock", "Unknown")
  
     if issue_type == "MISSING":
         return {
-            "root_cause": "Upstream data source failed to provide value",
+            "root_cause": "Data not received from upstream system",
             "risk": "HIGH",
-            "suggestion": "Check source system and reprocess missing data"
+            "suggestion": "Reprocess data or check source system"
         }
  
     elif issue_type == "DUPLICATE":
         return {
-            "root_cause": "Duplicate data ingestion from upstream system",
+            "root_cause": "Duplicate ingestion of same data",
             "risk": "MEDIUM",
-            "suggestion": "Remove duplicate records and validate ingestion logic"
+            "suggestion": "Remove duplicate records and fix ingestion logic"
         }
  
     elif issue_type == "MISMATCH":
         return {
-            "root_cause": f"Mismatch between expected and actual values for {stock}",
+            "root_cause": "Actual value does not match expected/reference value",
             "risk": "HIGH",
-            "suggestion": "Validate corporate action feed and correct value before posting"
+            "suggestion": "Validate data with trusted source"
         }
  
     elif issue_type == "INVALID":
         return {
-            "root_cause": "Invalid value detected (zero or negative)",
+            "root_cause": "Invalid or placeholder value detected",
             "risk": "HIGH",
-            "suggestion": "Check business rules and correct invalid data"
+            "suggestion": "Correct data based on business rules"
         }
  
     else:
