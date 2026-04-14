@@ -1,0 +1,8 @@
+ticket_id,issue_type,event_id,stock,description,priority,status,root_cause,suggestion,created_time
+TICK-20260414093102395394,MISSING,3,HDFC,MISSING issue detected in corporate action data,HIGH,OPEN,Data not received from upstream system,Reprocess data or check source system,2026-04-14 09:31:02
+TICK-20260414093102396022,DUPLICATE,4,N/A,Duplicate event_id found (2 times),MEDIUM,OPEN,Same data processed multiple times or duplicate ingestion,Remove duplicate records and check ingestion process,2026-04-14 09:31:02
+TICK-20260414093102397635,MISMATCH,2,INFY,MISMATCH issue detected in corporate action data,HIGH,OPEN,Actual value does not match expected/reference value,Validate data with trusted source,2026-04-14 09:31:02
+TICK-20260414093102397818,MISMATCH,5,SBIN,MISMATCH issue detected in corporate action data,HIGH,OPEN,Actual value does not match expected/reference value,Validate data with trusted source,2026-04-14 09:31:02
+TICK-20260414093102398055,MISMATCH,7,WIPRO,MISMATCH issue detected in corporate action data,HIGH,OPEN,Actual value does not match expected/reference value,Validate data with trusted source,2026-04-14 09:31:02
+TICK-20260414093102398269,MISMATCH,10,LT,MISMATCH issue detected in corporate action data,HIGH,OPEN,Actual value does not match expected/reference value,Validate data with trusted source,2026-04-14 09:31:02
+TICK-20260414093102399096,INVALID,7,WIPRO,INVALID issue detected in corporate action data,HIGH,OPEN,Invalid or placeholder value detected,Correct data based on business rules,2026-04-14 09:31:02
