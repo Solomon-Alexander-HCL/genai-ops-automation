@@ -1,8 +1,8 @@
 ticket_id,issue_type,event_id,stock,description,priority,status,root_cause,suggestion,created_time
-TICK-20260410202440433679,MISSING,3,HDFC,,HIGH,OPEN,Upstream data source failed to provide value,Check source system and reprocess missing data,2026-04-10 20:24:40
-TICK-20260410202440433768,DUPLICATE,4,N/A,Duplicate event_id found (2 times),MEDIUM,OPEN,Duplicate data ingestion,Remove duplicate records,2026-04-10 20:24:40
-TICK-20260410202440434097,MISMATCH,2,INFY,,HIGH,OPEN,Mismatch between expected and actual values for INFY,Validate corporate action feed and correct value before posting,2026-04-10 20:24:40
-TICK-20260410202440434178,MISMATCH,5,SBIN,,HIGH,OPEN,Mismatch between expected and actual values for SBIN,Validate corporate action feed and correct value before posting,2026-04-10 20:24:40
-TICK-20260410202440434241,MISMATCH,7,WIPRO,,HIGH,OPEN,Mismatch between expected and actual values for WIPRO,Validate corporate action feed and correct value before posting,2026-04-10 20:24:40
-TICK-20260410202440434300,MISMATCH,10,LT,,HIGH,OPEN,Mismatch between expected and actual values for LT,Validate corporate action feed and correct value before posting,2026-04-10 20:24:40
-TICK-20260410202440434543,INVALID,7,WIPRO,,HIGH,OPEN,Invalid value detected (zero or negative),Check business rules and correct invalid data,2026-04-10 20:24:40
+TICK-20260411071401234948,MISSING,3,HDFC,,HIGH,OPEN,Upstream data source failed to provide value,Check source system and reprocess missing data,2026-04-11 07:14:01
+TICK-20260411071401235047,DUPLICATE,4,N/A,Duplicate event_id found (2 times),MEDIUM,OPEN,Duplicate data ingestion,Remove duplicate records,2026-04-11 07:14:01
+TICK-20260411071401235332,MISMATCH,2,INFY,,HIGH,OPEN,Mismatch between expected and actual values for INFY,Validate corporate action feed and correct value before posting,2026-04-11 07:14:01
+TICK-20260411071401235406,MISMATCH,5,SBIN,,HIGH,OPEN,Mismatch between expected and actual values for SBIN,Validate corporate action feed and correct value before posting,2026-04-11 07:14:01
+TICK-20260411071401235469,MISMATCH,7,WIPRO,,HIGH,OPEN,Mismatch between expected and actual values for WIPRO,Validate corporate action feed and correct value before posting,2026-04-11 07:14:01
+TICK-20260411071401235527,MISMATCH,10,LT,,HIGH,OPEN,Mismatch between expected and actual values for LT,Validate corporate action feed and correct value before posting,2026-04-11 07:14:01
+TICK-20260411071401235819,INVALID,7,WIPRO,,HIGH,OPEN,Invalid value detected (zero or negative),Check business rules and correct invalid data,2026-04-11 07:14:01
