@@ -11,7 +11,7 @@ async function loadData() {
         INVALID: 0
     };
  
-    let tableHTML = "<tr><th>Issue</th><th>Event ID</th><th>Root Cause</th><th>Suggestion</th><th>Priority</th></tr>";
+    let tableHTML = "<tr><th>Issue</th><th>Event ID</th><th>Root Cause</th><th>Suggestion</th><th>Description</th></tr>";
  
     rows.forEach(row => {
         if (!row) return;
@@ -22,7 +22,7 @@ async function loadData() {
         let event_id = cols[2];
         let root = cols[6];
         let suggestion = cols[7];
-        let priority = cols[4];
+        let description = cols[4];
  
         if (counts[issue] !== undefined) {
             counts[issue]++;
@@ -33,7 +33,7 @@ async function loadData() {
             <td>${event_id}</td>
             <td>${root}</td>
             <td>${suggestion}</td>
-            <td>${priority}</td>
+            <td>${description}</td>
         </tr>`;
     });
  
